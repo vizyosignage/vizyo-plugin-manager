@@ -11,7 +11,7 @@ We are considering three different plugin types, and we must ensure that they wo
 2. View.axaml + View.cs (.axaml and .cs file-based)
 * C# code support in addition to axaml
 * For example, weather plugins that retrieve data from a server
-3. View.dll (compiled View.axaml + View.cs + if available, ViewModel.cs and additional .cs files)
+3. View.dll (compiled View.axaml + View.cs + if available, ViewModel.cs, Assets, Resources and additional .cs files)
 * For much more complex plugins
 
 Thanks
