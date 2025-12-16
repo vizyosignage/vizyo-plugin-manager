@@ -1,9 +1,10 @@
 # vizyo-plugin-manager
 Plugin system development for Vizyo Digital Signage application.
 
-The aim of this project is to determine the plugin infrastructure for the Vizyo Digital Signage application.
+The goal of this project is to determine the plugin infrastructure for the Vizyo Digital Signage application.
 
-We are considering 3 different models:
+We are considering 3 different models, and we must ensure that they work seamlessly on Windows, Linux, and Android:
+
 1. View.axaml (.axaml file-based)
 * For custom text, image, animation, etc. plugins
 * All operations that do not require C# code
