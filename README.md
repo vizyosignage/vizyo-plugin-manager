@@ -3,7 +3,7 @@ Plugin system development for Vizyo Digital Signage application.
 
 The goal of this project is to determine the plugin infrastructure for the Vizyo Digital Signage application.
 
-We are considering 3 different models, and we must ensure that they work seamlessly on Windows, Linux, and Android:
+We are considering three different models, and we must ensure that they work seamlessly on Windows, Linux, and Android:
 
 1. View.axaml (.axaml file-based)
 * For custom text, image, animation, etc. plugins
@@ -11,5 +11,11 @@ We are considering 3 different models, and we must ensure that they work seamles
 2. View.axaml + View.cs (.axaml and .cs file-based)
 * C# code support in addition to axaml
 * For example, weather plugins that retrieve data from a server
-3. ViewModel.dll (compiled axaml + view.cs + model.cs if available + additional .cs files if available)
+3. View.dll (compiled View.axaml + View.cs + ViewModel.cs if available + additional .cs files if available)
 * For much more complex plugins
+
+Thanks
+
++ [Avalonia](https://github.com/AvaloniaUI/Avalonia)
++ [XamlPlayground](https://github.com/AvaloniaUI/XamlPlayground)
++ [Prise](https://github.com/merken/Prise)
