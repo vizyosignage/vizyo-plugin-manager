@@ -3,7 +3,7 @@ Plugin system development for Vizyo Digital Signage application.
 
 The goal of this project is to determine the plugin infrastructure for the Vizyo Digital Signage application.
 
-We are considering three different plugin types, and we must ensure that they work seamlessly on Windows, Linux, and Android.
+We are considering three different plugin types, and we must ensure that they work seamlessly on Windows, Linux, Android and  WASM Browser.
 
 1. View.axaml (.axaml file-based)
 * For custom text, image, animation, etc. plugins
