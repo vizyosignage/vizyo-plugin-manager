@@ -1,5 +1,5 @@
 # vizyo-plugin-manager
-Plugin system development for Vizyo Digital Signage application.
+Plugin system development (trial and error, learning) for Vizyo Digital Signage application.
 
 The goal of this project is to determine the plugin infrastructure for the Vizyo Digital Signage application.
 
