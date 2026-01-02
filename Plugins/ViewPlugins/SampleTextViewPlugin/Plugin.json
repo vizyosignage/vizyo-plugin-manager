@@ -1,0 +1,9 @@
+{
+    "author": "Vizyo",
+    "home": "https://github.com/vizyosignage",
+    "name": "SampleTextViewPlugin",
+    "pluginType": "View",
+    "mediaType": "Text",
+    "entryFile": "SampleTextViewPlugin.axaml",
+    "version": "1.0.0.0"
+}

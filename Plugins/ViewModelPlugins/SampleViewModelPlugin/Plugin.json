@@ -1,0 +1,9 @@
+{
+    "author": "Vizyo",
+    "home": "https://github.com/vizyosignage",
+    "name": "SampleViewModelPlugin",
+    "pluginType": "ViewModel",
+    "mediaType": "Custom",
+    "entryFile": "SampleViewModelPlugin.dll",
+    "version": "1.0.0.0"
+}

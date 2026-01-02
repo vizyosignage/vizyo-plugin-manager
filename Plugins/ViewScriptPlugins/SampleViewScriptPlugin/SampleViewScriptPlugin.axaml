@@ -1,0 +1,6 @@
+<UserControl xmlns="https://github.com/avaloniaui">
+<StackPanel>
+    <TextBlock Name="text" Text="Text" HorizontalAlignment="Center" />
+    <Button Name="button" Content="Click Me" HorizontalAlignment="Center" />
+</StackPanel>
+</UserControl>

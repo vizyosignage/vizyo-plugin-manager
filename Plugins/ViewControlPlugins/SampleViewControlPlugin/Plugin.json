@@ -1,0 +1,9 @@
+{
+    "author": "Vizyo",
+    "home": "https://github.com/vizyosignage",
+    "name": "SampleViewControlPlugin",
+    "pluginType": "ViewControl",
+    "mediaType": "Custom",
+    "entryFile": "SampleViewControlPlugin.dll",
+    "version": "1.0.0.0"
+}

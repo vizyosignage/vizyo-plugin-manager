@@ -1,0 +1,15 @@
+bin
+obj
+_dist
+publish
+**/PluginApp/Plugins
+**/PluginServer/Plugins
+**/MyHost/Plugins
+.vs
+*.cmd
+appsettings.Development.json
+!Monorepo.sln
+global.json
+*.user
+.DS_Store
+\.idea

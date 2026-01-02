@@ -1,0 +1,134 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shareds", "Shareds", "{C68E18A6-71F7-411F-926F-8A8D6E388243}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5D20B079-4F23-45FE-9DDA-6EADE110DCBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.csproj", "{82A90696-82B8-4B61-AD65-BE31089D9D3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Android", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Android\Vizyo.Plugin.Playground.Android.csproj", "{A53915D3-6565-42D6-9684-C1A5C1251806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Desktop", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Desktop\Vizyo.Plugin.Playground.Desktop.csproj", "{5AEAF2DF-65B1-4320-8760-9E1A8909B650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.iOS", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.iOS\Vizyo.Plugin.Playground.iOS.csproj", "{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Browser", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Browser\Vizyo.Plugin.Playground.Browser.csproj", "{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{21978589-C135-4BE8-9994-B6E99658478B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prise", "Core\Prise\Prise.csproj", "{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prise.Plugin", "Core\Prise.Plugin\Prise.Plugin.csproj", "{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prise.Proxy", "Core\Prise.Proxy\Prise.Proxy.csproj", "{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Shared.Contracts", "Shareds\Vizyo.Plugin.Shared.Contracts\Vizyo.Plugin.Shared.Contracts.csproj", "{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewModelPlugins", "ViewModelPlugins", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewControlPlugins", "ViewControlPlugins", "{4856959D-02AF-451D-B295-59578BD97C09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewPlugins", "ViewPlugins", "{3765C903-277B-41DF-9165-C8AF6E5F5E26}"
+	ProjectSection(SolutionItems) = preProject
+		Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin1.axaml = Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin1.axaml
+		Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin2.axaml = Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin2.axaml
+		Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin3.axaml = Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin3.axaml
+		Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin4.axaml = Plugins\ViewPlugins\SampleAnimatedViewPlugin\SampleAnimatedViewPlugin4.axaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleViewControlPlugin", "Plugins\ViewControlPlugins\SampleViewControlPlugin\SampleViewControlPlugin.csproj", "{40000FC4-FBA1-234B-4C15-184F44B8CB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleViewModelPlugin", "Plugins\ViewModelPlugins\SampleViewModelPlugin\SampleViewModelPlugin.csproj", "{D7DF27E7-5618-FE23-AB6E-8414DD1DE81C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewScriptPlugins", "ViewScriptPlugins", "{2E0D11F9-4675-40FF-B0E7-4038F7A5716D}"
+	ProjectSection(SolutionItems) = preProject
+		Plugins\ViewScriptPlugins\SampleViewScriptPlugin\SampleViewScriptPlugin.axaml = Plugins\ViewScriptPlugins\SampleViewScriptPlugin\SampleViewScriptPlugin.axaml
+		Plugins\ViewScriptPlugins\SampleViewScriptPlugin\SampleViewScriptPlugin.cs = Plugins\ViewScriptPlugins\SampleViewScriptPlugin\SampleViewScriptPlugin.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServicePlugins", "ServicePlugins", "{24894299-49CA-4853-BDE7-52C96E0DA3D2}"
+	ProjectSection(SolutionItems) = preProject
+		Plugins\ServicePlugins\SampleServicePlugin1.cs = Plugins\ServicePlugins\SampleServicePlugin1.cs
+		Plugins\ServicePlugins\SampleServicePlugin2.cs = Plugins\ServicePlugins\SampleServicePlugin2.cs
+		Plugins\ServicePlugins\SampleServicePlugin3.cs = Plugins\ServicePlugins\SampleServicePlugin3.cs
+		Plugins\ServicePlugins\SampleServicePlugin4.cs = Plugins\ServicePlugins\SampleServicePlugin4.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82A90696-82B8-4B61-AD65-BE31089D9D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A90696-82B8-4B61-AD65-BE31089D9D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A90696-82B8-4B61-AD65-BE31089D9D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A90696-82B8-4B61-AD65-BE31089D9D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53915D3-6565-42D6-9684-C1A5C1251806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53915D3-6565-42D6-9684-C1A5C1251806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53915D3-6565-42D6-9684-C1A5C1251806}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A53915D3-6565-42D6-9684-C1A5C1251806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53915D3-6565-42D6-9684-C1A5C1251806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53915D3-6565-42D6-9684-C1A5C1251806}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40000FC4-FBA1-234B-4C15-184F44B8CB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40000FC4-FBA1-234B-4C15-184F44B8CB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40000FC4-FBA1-234B-4C15-184F44B8CB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40000FC4-FBA1-234B-4C15-184F44B8CB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7DF27E7-5618-FE23-AB6E-8414DD1DE81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7DF27E7-5618-FE23-AB6E-8414DD1DE81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7DF27E7-5618-FE23-AB6E-8414DD1DE81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7DF27E7-5618-FE23-AB6E-8414DD1DE81C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95} = {5D20B079-4F23-45FE-9DDA-6EADE110DCBB}
+		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B} = {5D20B079-4F23-45FE-9DDA-6EADE110DCBB}
+		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA} = {5D20B079-4F23-45FE-9DDA-6EADE110DCBB}
+		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88} = {C68E18A6-71F7-411F-926F-8A8D6E388243}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {21978589-C135-4BE8-9994-B6E99658478B}
+		{4856959D-02AF-451D-B295-59578BD97C09} = {21978589-C135-4BE8-9994-B6E99658478B}
+		{3765C903-277B-41DF-9165-C8AF6E5F5E26} = {21978589-C135-4BE8-9994-B6E99658478B}
+		{40000FC4-FBA1-234B-4C15-184F44B8CB18} = {4856959D-02AF-451D-B295-59578BD97C09}
+		{D7DF27E7-5618-FE23-AB6E-8414DD1DE81C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{2E0D11F9-4675-40FF-B0E7-4038F7A5716D} = {21978589-C135-4BE8-9994-B6E99658478B}
+		{24894299-49CA-4853-BDE7-52C96E0DA3D2} = {21978589-C135-4BE8-9994-B6E99658478B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5954710-C33B-4C6F-87C8-1A2A17806C58}
+	EndGlobalSection
+EndGlobal
