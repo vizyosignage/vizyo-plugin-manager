@@ -14,7 +14,9 @@ We are considering four different plugin types, and we must ensure that they wor
 3. View.dll (compiled View.axaml + View.cs + if available, ViewModel.cs, Assets, Resources and additional .cs files)
 * For much more complex plugins
 4. Service.cs (.cs script file-based)
-* For eaxmple, a plugin that periodically deletes unused files from the media folder
+* For example, a plugin that periodically deletes unused files from the media folder
+
+[What is AXAML?](https://docs.avaloniaui.net/docs/basics/user-interface/introduction-to-xaml)
 
 Thanks
 
