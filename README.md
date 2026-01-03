@@ -25,4 +25,4 @@ Thanks
 + [Prise](https://github.com/merken/Prise)
 
 
-![](images/vizyo_playground.mp4)
+[![](images/vizyo_playground.png)](images/vizyo_playground.mp4)
