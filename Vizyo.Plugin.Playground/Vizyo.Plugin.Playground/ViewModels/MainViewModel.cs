@@ -35,22 +35,6 @@ namespace Vizyo.Plugin.Playground.ViewModels
 {
     public partial class MainViewModel : ViewModelBase
     {
-        [ObservableProperty]
-        private string _greeting = "Welcome to Avalonia!";
-        
-        //public UserControl CurrentControl { get; set; }
-        public List<string> Components { get; set; }
-
-        public string Test;
-
-        private Dictionary<string, IPlugin> components = new Dictionary<string, IPlugin>();
-
-        // Ekrandaki tüm plugin View'lerini tutar (XAML ItemsControl'e bağlanacak)
-        public ObservableCollection<UserControl> ActivePlugins { get; } = new ObservableCollection<UserControl>();
-
-        // Uygulama açılışında yüklenen tüm IPlugin tiplerini tutar (Dictionary önerilir)
-        public Dictionary<string, IPlugin> AvailablePlugins { get; set; } = new Dictionary<string, IPlugin>();
-
         //private readonly PluginHost _pluginHost;
         private readonly PluginManager _pluginManager;
 
@@ -84,10 +68,6 @@ namespace Vizyo.Plugin.Playground.ViewModels
 
         public MainViewModel() 
         {
-            Debug.WriteLine("MainViewModel started");
-            //GetViewPlugin();
-            //LoadComponents();
-            //TestMethod();
             LoadLogo();
 
             //_pluginHost = new PluginHost();
@@ -130,106 +110,7 @@ namespace Vizyo.Plugin.Playground.ViewModels
             //});
         }
 
-        async void LoadComponents()
-        {
-            var pluginLoader = AppServiceLocator.GetService<IPluginLoader>();
-            var dist = GetPathToComponentsPublishDirectory();
-            var pluginScanResults = await pluginLoader.FindPlugins<IPlugin>(dist);
-
-            components = new Dictionary<string, IPlugin>();
-            foreach (var pluginScanResult in pluginScanResults)
-            {
-                var plugin = await pluginLoader.LoadPlugin<IPlugin>(pluginScanResult, configure: (ctx) =>
-                {
-                    ctx.AddHostTypes(new[] { typeof(Application) });
-                });
-
-                components.Add(plugin.GetName(), plugin);
-            }
-
-
-            Dispatcher.UIThread.Post(() =>
-            {
-                Components = new List<string>(components.Select(p => p.Key));
-                OnPropertyChanged(nameof(Components));
-                //LoadComponent("SamplePlugin");
-                //LoadComponent("SampleViewControlPlugin");
-                //LoadComponent("SampleViewModelPlugin");
-            });
-        }
-
-        void UnLoadComponents()
-        {
-            var pluginLoader = AppServiceLocator.GetService<IPluginLoader>();
-            pluginLoader.UnloadAll();
-            Control = null;
-            Components = new List<string>();
-            OnPropertyChanged(nameof(Control));
-            OnPropertyChanged(nameof(Components));
-        }
-
-        void LoadComponent(string parameter)
-        {
-            var plugin = components[parameter];
-            
-            Control = plugin.Load();
-            Control.HorizontalAlignment = HorizontalAlignment.Center;
-            Control.VerticalAlignment = VerticalAlignment.Center;
-            //CurrentControl.Width = 400;
-            //CurrentControl.Height = 100;
-            //Canvas.SetLeft(CurrentControl, 50);
-            //Canvas.SetTop(CurrentControl, 100);
-            OnPropertyChanged(nameof(Control));
-        }
-
-        void UnloadCurrentControl()
-        {
-            Control = null;
-            OnPropertyChanged(nameof(Control));
-        }
-
-        static string GetPathToComponentsPublishDirectory()
-        {
-            var pathToThisProgram = Assembly.GetExecutingAssembly().Location; // this assembly location (/bin/Debug/net9.0)
-
-            var pathToExecutingDir = Path.GetDirectoryName(pathToThisProgram);
-
-            //var dllFiles = Directory.GetFiles("D:\\PROJELER\\Vizyo\\vizyo-plugin-manager\\Plugins", "*.dll",  SearchOption.AllDirectories);
-
-            string fullPath = Path.GetFullPath(Path.Combine(pathToExecutingDir, "D:\\PROJELER\\Vizyo\\vizyo-plugin-manager\\test_plugins"));
-            Debug.WriteLine(fullPath);
-
-            return fullPath;
-
-            //return Path.GetFullPath(Path.Combine(pathToExecutingDir, "D:\\PROJELER\\Vizyo\\vizyo-plugin-manager\\Plugins\\SamplePlugin\\bin\\Debug\\net9.0"));
-            //return Path.GetFullPath(Path.Combine(pathToExecutingDir, "../../../../Components/bin/Debug/net9.0"));
-            //return Path.GetFullPath(Path.Combine(pathToExecutingDir, "../../../../Components/bin/Debug/netcoreapp3.1"));
-        }
-
-        private async void TestMethod()
-        {
-            var timer = new PeriodicTimer(TimeSpan.FromSeconds(10));
-           
-            while (await timer.WaitForNextTickAsync())
-            {
-                //UnLoadComponents();
-                UnloadCurrentControl();
-                await Task.Delay(5000);
-                LoadComponent("SampleViewModelPlugin");
-                await Task.Delay(5000);
-                UnloadCurrentControl();
-                
-                timer.Dispose();
-                break;
-                //Dispatcher.UIThread.Post(() =>
-                //{
-                    
-                //});
-            }
-
-            Debug.WriteLine("main test timer dispose");
-        }
-
+    
         private static List<FilePickerFileType> GetXamlAndCodeFileTypes()
         {
             return new List<FilePickerFileType>
@@ -537,129 +418,6 @@ namespace Vizyo.Plugin.Playground.ViewModels
                 await using var stream = await _openCodeFile.OpenWriteAsync();
                 await using var writer = new StreamWriter(stream);
                 await writer.WriteAsync(CurrentSample.Code);
-            }
-        }
-
-        private async Task OpenDllFileDesktop()
-        {
-            if (CurrentSample is null)
-            {
-                CurrentSample = new SampleViewModel("", "", "", null, null);
-            }
-
-            if (StorageProvider is null)
-            {
-                return;
-            }
-
-            var result = await StorageProvider.OpenFolderPickerAsync(new FolderPickerOpenOptions
-            {
-                Title = "Select dll folder",
-                AllowMultiple = false
-            });
-
-            var folder = result.FirstOrDefault();
-            if (folder is not null)
-            {
-                Debug.WriteLine($"{folder.Name} - {folder.Path.AbsolutePath} - {folder.Path.LocalPath} - {folder.TryGetLocalPath()}");
-                try
-                {
-                    var pluginLoader = AppServiceLocator.GetService<IPluginLoader>();
-
-                    //string actualPath = GetAndroidActualPath(folder.Path.LocalPath);
-
-                    string localPluginDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TempPlugins");
-                    Debug.WriteLine($"{localPluginDir}");
-
-                    if (!Directory.Exists(localPluginDir)) Directory.CreateDirectory(localPluginDir);
-
-                    // for android test. move files, downloads folder to LocalApplicationData
-                    var items = folder.GetItemsAsync();
-                    await foreach (var item in items)
-                    {
-                        Debug.WriteLine($"{item.Name}");
-                        //if (item is IStorageFile file && file.Name.EndsWith(".dll"))
-                        if (item is IStorageFile file)
-                        {
-                            using var stream = await file.OpenReadAsync();
-                            using var destination = File.Create(Path.Combine(localPluginDir, file.Name));
-                            await stream.CopyToAsync(destination);
-                        }
-                    }
-
-                    var pluginScanResults = await pluginLoader.FindPlugins<IPlugin>(localPluginDir);
-
-                    components = new Dictionary<string, IPlugin>();
-                    foreach (var pluginScanResult in pluginScanResults)
-                    {
-                        var plugin = await pluginLoader.LoadPlugin<IPlugin>(pluginScanResult, configure: (ctx) =>
-                        {
-                            ctx.AddHostTypes(new[] { typeof(Application) });
-                        });
-
-                        Control = plugin.Load();
-                        OnPropertyChanged(nameof(Control));
-                    }
-                }
-                catch (Exception exception)
-                {
-                    Debug.WriteLine(exception);
-                }
-            }
-        }
-
-        private async Task OpenDllFileAndroid()
-        {
-            if (CurrentSample is null)
-            {
-                CurrentSample = new SampleViewModel("", "", "", null, null);
-            }
-
-            
-            try
-            {
-                var pluginLoader = AppServiceLocator.GetService<IPluginLoader>();
-
-                //string actualPath = GetAndroidActualPath(folder.Path.LocalPath);
-
-                string localPluginDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TempPlugins", "SampleViewControlPlugin.dll");
-                Debug.WriteLine($"{localPluginDir}");
-
-               // if (!Directory.Exists(localPluginDir)) Directory.CreateDirectory(localPluginDir);
-
-                var plugin = await _pluginManager.LoadPluginFromPath(localPluginDir);
-                Control = plugin.Load();
-                OnPropertyChanged(nameof(Control));
-
-                //var pluginScanResult = await pluginLoader.FindPlugin<IPlugin>(localPluginDir);
-
-                //string currentFramework = "net9.0-android";
-
-                //var plugin = await pluginLoader.LoadPlugin<IPlugin>(pluginScanResult, configure: (ctx) =>
-                //{
-                //    ctx.AddHostTypes(new[] { typeof(Application) });
-                //});
-
-                //Control = plugin.Load();
-                //OnPropertyChanged(nameof(Control));
-
-
-                //var pluginScanResults = await pluginLoader.FindPlugins<IPlugin>(localPluginDir);
-                //components = new Dictionary<string, IPlugin>();
-                //foreach (var pluginScanResult in pluginScanResults)
-                //{
-                //    var plugin = await pluginLoader.LoadPlugin<IPlugin>(pluginScanResult, configure: (ctx) =>
-                //    {
-                //        ctx.AddHostTypes(new[] { typeof(Application) });
-                //    });
-
-                //    Control = plugin.Load();
-                //    OnPropertyChanged(nameof(Control));
-                //}
-            }
-            catch (Exception exception)
-            {
-                Debug.WriteLine(exception);
             }
         }
 
