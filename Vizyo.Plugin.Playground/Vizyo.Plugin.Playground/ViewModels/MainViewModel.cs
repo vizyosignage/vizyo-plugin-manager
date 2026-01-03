@@ -114,9 +114,9 @@ namespace Vizyo.Plugin.Playground.ViewModels
         {
             return new List<FilePickerFileType>
         {
-            StorageService.Axaml,
-            StorageService.Xaml,
-            StorageService.CSharp,
+            //StorageService.Axaml,
+            //StorageService.Xaml,
+            //StorageService.CSharp,
             StorageService.All
         };
         }
@@ -280,8 +280,8 @@ namespace Vizyo.Plugin.Playground.ViewModels
                     await using var stream = await _openXamlFile.OpenReadAsync();
                     using var reader = new StreamReader(stream);
                     var fileContent = await reader.ReadToEndAsync();
-                    CurrentSample.Xaml = fileContent;
-                    Run(CurrentSample.Xaml, CurrentSample.Code);
+                    //CurrentSample.Xaml = fileContent;
+                    Run(fileContent, "");
                 }
                 catch (Exception exception)
                 {
@@ -364,8 +364,8 @@ namespace Vizyo.Plugin.Playground.ViewModels
                     await using var stream = await _openCodeFile.OpenReadAsync();
                     using var reader = new StreamReader(stream);
                     var fileContent = await reader.ReadToEndAsync();
-                    CurrentSample.Code = fileContent;
-                    //Run(CurrentSample.Xaml, CurrentSample.Code);
+                    //CurrentSample.Code = fileContent;
+                    Run("", fileContent);
                 }
                 catch (Exception exception)
                 {

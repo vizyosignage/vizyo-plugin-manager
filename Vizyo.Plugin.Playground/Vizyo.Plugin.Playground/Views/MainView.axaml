@@ -31,9 +31,9 @@
 						<MenuItem Header="Open File (dll)" Command="{Binding OpenDllFileCommand}" />
 					</MenuItem>
 
-					<MenuItem Header="Run"
+					<!--<MenuItem Header="Run"
 							  Classes="main"
-							  Command="{Binding RunCommand}" />
+							  Command="{Binding RunCommand}" />-->
 				</Menu>
 
 			</StackPanel>
