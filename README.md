@@ -22,7 +22,6 @@ Thanks
 
 + [Avalonia](https://github.com/AvaloniaUI/Avalonia)
 + [XamlPlayground](https://github.com/AvaloniaUI/XamlPlayground)
-+ [Prise](https://github.com/merken/Prise)
 
 
 [![](images/vizyo_playground.png)](images/vizyo_playground.mp4)

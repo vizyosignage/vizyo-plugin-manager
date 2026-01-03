@@ -8,8 +8,6 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using Avalonia.Platform.Storage;
 using Microsoft.Extensions.DependencyInjection;
-using Prise.DependencyInjection;
-using Prise.Proxy;
 using Vizyo.Plugin.Playground.Converters;
 using Vizyo.Plugin.Playground.ViewModels;
 using Vizyo.Plugin.Playground.Views;
@@ -69,10 +67,10 @@ namespace Vizyo.Plugin.Playground
 
                 //services.AddSingleton<LocalizationService>();
                 services.AddTransient<MainViewModel>();
-                services
-                   .AddPrise()
-                   .AddFactory<IResultConverter>(() => new AvaloniaPluginResultConverter()
-               );
+               // services
+               //    .AddPrise()
+               //    .AddFactory<IResultConverter>(() => new AvaloniaPluginResultConverter()
+               //);
 
                 var provider = services.BuildServiceProvider();
                 AppServiceLocator.Configure(provider);
@@ -99,10 +97,10 @@ namespace Vizyo.Plugin.Playground
 
                 //services.AddSingleton<LocalizationService>();
                 services.AddTransient<MainViewModel>();
-                services
-                   .AddPrise()
-                   .AddFactory<IResultConverter>(() => new AvaloniaPluginResultConverter()
-               );
+               // services
+               //    .AddPrise()
+               //    .AddFactory<IResultConverter>(() => new AvaloniaPluginResultConverter()
+               //);
 
                 var provider = services.BuildServiceProvider();
                 AppServiceLocator.Configure(provider);

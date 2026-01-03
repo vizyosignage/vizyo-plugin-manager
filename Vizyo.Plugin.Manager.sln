@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shareds", "Shareds", "{C68E18A6-71F7-411F-926F-8A8D6E388243}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5D20B079-4F23-45FE-9DDA-6EADE110DCBB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.csproj", "{82A90696-82B8-4B61-AD65-BE31089D9D3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Android", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Android\Vizyo.Plugin.Playground.Android.csproj", "{A53915D3-6565-42D6-9684-C1A5C1251806}"
@@ -18,12 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Browser", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Browser\Vizyo.Plugin.Playground.Browser.csproj", "{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{21978589-C135-4BE8-9994-B6E99658478B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prise", "Core\Prise\Prise.csproj", "{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prise.Plugin", "Core\Prise.Plugin\Prise.Plugin.csproj", "{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prise.Proxy", "Core\Prise.Proxy\Prise.Proxy.csproj", "{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Shared.Contracts", "Shareds\Vizyo.Plugin.Shared.Contracts\Vizyo.Plugin.Shared.Contracts.csproj", "{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}"
 EndProject
@@ -87,18 +79,6 @@ Global
 		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -116,9 +96,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F6C18BBA-C5EB-8518-2E3F-7F72AD2ACF95} = {5D20B079-4F23-45FE-9DDA-6EADE110DCBB}
-		{47C3436F-DF3A-67B1-8E49-E471FFA29D8B} = {5D20B079-4F23-45FE-9DDA-6EADE110DCBB}
-		{2EC7E4FD-4963-97E5-B55F-788EA3D007DA} = {5D20B079-4F23-45FE-9DDA-6EADE110DCBB}
 		{8819CAFA-55A4-C4C4-E03A-F7E848B96F88} = {C68E18A6-71F7-411F-926F-8A8D6E388243}
 		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {21978589-C135-4BE8-9994-B6E99658478B}
 		{4856959D-02AF-451D-B295-59578BD97C09} = {21978589-C135-4BE8-9994-B6E99658478B}

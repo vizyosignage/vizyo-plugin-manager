@@ -26,7 +26,6 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using CommunityToolkit.Mvvm.Messaging.Messages;
 using Microsoft.VisualBasic;
-using Prise;
 using Vizyo.Plugin.Playground.Services;
 using Vizyo.Plugin.Shared.Contracts;
 using Microsoft.Extensions.Hosting;
