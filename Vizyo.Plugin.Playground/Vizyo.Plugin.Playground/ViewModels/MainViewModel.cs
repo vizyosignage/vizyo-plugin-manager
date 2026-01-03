@@ -453,19 +453,6 @@ namespace Vizyo.Plugin.Playground.ViewModels
                     Debug.WriteLine(exception);
                 }
             }
-
-
-            //try
-            //{
-            //    var plugin = await pluginManager.LoadBrowserPlugin("/plugins/SampleViewControlPlugin.dll");
-            //    Control = plugin.Load();
-            //    OnPropertyChanged(nameof(Control));
-
-            //}
-            //catch (Exception exception)
-            //{
-            //    Debug.WriteLine(exception);
-            //}
         }
 
         private async Task OpenFolder()

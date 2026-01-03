@@ -28,41 +28,6 @@ namespace Vizyo.Plugin.Playground.Services
         {
         }
 
-        public UserControl? GetViewTestPlugin()
-        {
-            //var dataContext = new { Text = "Deneme 123", Foreground = Brush.Parse("#fff"), Background = "Black", FontFamily = SetFontFamily("Times New Roman"), FontSize = 32, Opacity = 0.5d };
-
-            //string json = """{ "Text" : "Deneme 123", "Foreground": "White", "Background" : "Black", "FontFamily" : "Times New Roman", "FontSize" : "32", "Opacity" : "0,5" }""";
-            //string json = """{ "Text" : "Deneme 123", "FontSize" : 12}""";
-            //var dataContext = JsonSerializer.Deserialize<TextBlock>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-            //string strContext = JsonSerializer.Serialize(dataContext, new JsonSerializerOptions { NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals });
-            //Debug.WriteLine(strContext);
-
-            //GetHttp();
-
-            //var xaml = File.ReadAllText("/SampleAnimatedViewPlugin/SampleAnimatedViewPlugin4.axaml");
-            //var control = AvaloniaRuntimeXamlLoader.Parse<UserControl>(xaml);
-
-            using var fs = File.OpenRead("D:\\PROJELER\\Vizyo\\vizyo-plugin-manager\\Plugins\\ViewPlugins\\SampleAnimatedViewPlugin\\SampleAnimatedViewPlugin4.axaml");
-            var control = AvaloniaRuntimeXamlLoader.Load(fs) as UserControl ?? null;
-
-
-            if (control != null)
-            {
-                control.Background = Brush.Parse("#ccc");
-                //control.Width = 300;
-                //control.Height = 200;
-                //Canvas.SetLeft(control, 100);
-                //Canvas.SetTop(control, 50);
-
-                //control.DataContext = dataContext;
-                return control;
-            }
-
-            return null;
-        }
-
         public async Task<IPlugin?> LoadPluginFromPath(string dllPath)
         {
             var assembly = Assembly.LoadFrom(dllPath);
@@ -134,13 +99,48 @@ namespace Vizyo.Plugin.Playground.Services
             return null;
         }
 
+
+        public UserControl? GetViewTestPlugin()
+        {
+            //var dataContext = new { Text = "Deneme 123", Foreground = Brush.Parse("#fff"), Background = "Black", FontFamily = SetFontFamily("Times New Roman"), FontSize = 32, Opacity = 0.5d };
+
+            //string json = """{ "Text" : "Deneme 123", "Foreground": "White", "Background" : "Black", "FontFamily" : "Times New Roman", "FontSize" : "32", "Opacity" : "0,5" }""";
+            //string json = """{ "Text" : "Deneme 123", "FontSize" : 12}""";
+            //var dataContext = JsonSerializer.Deserialize<TextBlock>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+            //string strContext = JsonSerializer.Serialize(dataContext, new JsonSerializerOptions { NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals });
+            //Debug.WriteLine(strContext);
+
+            //GetHttp();
+
+            //var xaml = File.ReadAllText("/SampleAnimatedViewPlugin/SampleAnimatedViewPlugin4.axaml");
+            //var control = AvaloniaRuntimeXamlLoader.Parse<UserControl>(xaml);
+
+            using var fs = File.OpenRead("D:\\PROJELER\\Vizyo\\vizyo-plugin-manager\\Plugins\\ViewPlugins\\SampleAnimatedViewPlugin\\SampleAnimatedViewPlugin4.axaml");
+            var control = AvaloniaRuntimeXamlLoader.Load(fs) as UserControl ?? null;
+
+
+            if (control != null)
+            {
+                control.Background = Brush.Parse("#ccc");
+                //control.Width = 300;
+                //control.Height = 200;
+                //Canvas.SetLeft(control, 100);
+                //Canvas.SetTop(control, 50);
+
+                //control.DataContext = dataContext;
+                return control;
+            }
+
+            return null;
+        }
+
         private async void GetHttp()
         {
             using (var client = new HttpClient())
             {
                 try
                 {
-                    // browser için test
                     var content = await client.GetStringAsync("/SampleAnimatedViewPlugin4.axaml");
                     Debug.WriteLine(content);
                 }

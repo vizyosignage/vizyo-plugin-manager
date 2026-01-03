@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Prise.Proxy;
 
-namespace Vizyo.Plugin.Playground.Infrastructure
+namespace Vizyo.Plugin.Playground.Converters
 {
     public class AvaloniaPluginResultConverter : ResultConverter
     {

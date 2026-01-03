@@ -10,7 +10,7 @@ using Avalonia.Platform.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Prise.DependencyInjection;
 using Prise.Proxy;
-using Vizyo.Plugin.Playground.Infrastructure;
+using Vizyo.Plugin.Playground.Converters;
 using Vizyo.Plugin.Playground.ViewModels;
 using Vizyo.Plugin.Playground.Views;
 
