@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.And
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Desktop", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Desktop\Vizyo.Plugin.Playground.Desktop.csproj", "{5AEAF2DF-65B1-4320-8760-9E1A8909B650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.iOS", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.iOS\Vizyo.Plugin.Playground.iOS.csproj", "{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vizyo.Plugin.Playground.Browser", "Vizyo.Plugin.Playground\Vizyo.Plugin.Playground.Browser\Vizyo.Plugin.Playground.Browser.csproj", "{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{21978589-C135-4BE8-9994-B6E99658478B}"
@@ -69,12 +67,6 @@ Global
 		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AEAF2DF-65B1-4320-8760-9E1A8909B650}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D0FD769-D3CA-48A9-ACDC-A28BBE66C462}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C07CFAB4-AF0C-4554-B238-07B7DF2DCE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
